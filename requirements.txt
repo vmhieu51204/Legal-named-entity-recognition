@@ -1,0 +1,12 @@
+transformers
+datasets
+seqeval
+accelerate
+pandas
+numpy
+scikit-learn
+matplotlib
+torch
+pytorch-crf
+gensim
+tqdm
