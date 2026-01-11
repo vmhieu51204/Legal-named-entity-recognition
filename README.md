@@ -54,7 +54,6 @@ The models were evaluated on the test set (10% split). The **F1-score** was used
 ## 5. Demo Sentences
 
 Sample 1:
-────────────────────────────────────────────────────────────────────────────────
 
 Sentence: in a shocking revelation , it has been discovered that a prominent financial institution has been implicated in a scandal involving unauthorized transactions . the institution has been found to be exe...
 
@@ -73,9 +72,8 @@ Legal-BERT Predictions:
 BiLSTM-CRF Predictions:
    ✅ executing unauthorized transactions in their clients accounts , leading to significant financial losses for the clients → VIOLATION
 
-────────────────────────────────────────────────────────────────────────────────
 Sample 2:
-────────────────────────────────────────────────────────────────────────────────
+
 Sentence: got a bunch of automated emails promoting some concert from this music app . didnt sign up for any of it , they just started spamming my personal and work email . they didnt even ask if i wanted these...
 
 Ground Truth Entities:
