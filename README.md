@@ -53,23 +53,42 @@ The models were evaluated on the test set (10% split). The **F1-score** was used
 
 ## 5. Demo Sentences
 
-Below are examples of how the model analyzes legal text:
+Sample 1:
+────────────────────────────────────────────────────────────────────────────────
 
-> "The **platform** [VIOLATED BY] has been found guilty of **breaching player trust** [VIOLATION]."
+Sentence: in a shocking revelation , it has been discovered that a prominent financial institution has been implicated in a scandal involving unauthorized transactions . the institution has been found to be exe...
 
-> "This constitutes a violation of **Article 5 of the GDPR** [LAW] regarding user data privacy."
+Ground Truth Entities:
+   • executing unauthorized transactions in their clients accounts , leading to significant financial losses for the clients → VIOLATION
 
-> "The **defendant** [VIOLATED BY] failed to comply with the **contractual obligations** [VIOLATION] owed to the **plaintiff** [VIOLATED ON]."
+DeBERTa-v3-base Predictions:
+   ✅ executing unauthorized transactions in their clients accounts , leading to significant financial losses for the clients → VIOLATION
 
----
+DeBERTa-v3-large Predictions:
+   ✅ executing unauthorized transactions in their clients accounts , leading to significant financial losses for the clients → VIOLATION
 
-## How to Run
-1.  **Install dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-2.  **Run the pipeline**:
-    ```bash
-    python main.py
-    ```
-    *Modify `src/config.py` to toggle specific models or change hyperparameters.*
+Legal-BERT Predictions:
+   ✅ executing unauthorized transactions in their clients accounts , leading to significant financial losses for the clients → VIOLATION
+
+BiLSTM-CRF Predictions:
+   ✅ executing unauthorized transactions in their clients accounts , leading to significant financial losses for the clients → VIOLATION
+
+────────────────────────────────────────────────────────────────────────────────
+Sample 2:
+────────────────────────────────────────────────────────────────────────────────
+Sentence: got a bunch of automated emails promoting some concert from this music app . didnt sign up for any of it , they just started spamming my personal and work email . they didnt even ask if i wanted these...
+
+Ground Truth Entities:
+   • automated emails promoting some concert → VIOLATION
+
+DeBERTa-v3-base Predictions:
+   ✅ automated emails promoting some concert → VIOLATION
+
+DeBERTa-v3-large Predictions:
+   ❌ spamming my personal and work email → VIOLATION
+
+Legal-BERT Predictions:
+   ❌ spamming my personal and work email → VIOLATION
+
+BiLSTM-CRF Predictions:
+   ❌ spamming my personal and work email → VIOLATION
