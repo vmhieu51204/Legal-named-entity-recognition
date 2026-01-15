@@ -4,7 +4,7 @@
 ## 1. Introduction
 This project focuses on **Legal Named Entity Recognition (NER)**, automating the extraction of key legal entities from unstructured text. Identifying entities such as laws, violations, and involved parties is crucial for legal document analysis, compliance monitoring, and case law understanding. 
 
-This repository contains a complete pipeline for loading data, preprocessing, training state-of-the-art NLP models (Transformers and BiLSTM-CRF), and evaluating their performance.
+This repository contains a complete pipeline for loading data, preprocessing, training NLP models (Transformers and BiLSTM-CRF), and evaluating their performance.
 
 ## 2. Dataset
 The project uses a dataset consisting of legal texts with annotated named entities.
